@@ -1,5 +1,5 @@
-/*Actividad
-Ejercicio 1. Programa que dada la edad de una persona indique si es mayor o menor de edad.*/
+//Actividad
+// Actividad 1
 
 
 let edad = prompt("Ingresa tu edad: ");
@@ -10,10 +10,7 @@ if (edad < 18) {
   alert("Eres mayor de edad."); 
 }
 
-/*Ejer 2. Dadas las tres calificaciones que el estudiante obtuvo en un curso:
-A. Determinar su promedio.
-B.Indicar si el estudiante aprobó o no el curso. 
-C.Las notas deben ser de 1 a 10 y aprueba con un promedio mayor de 6.*/
+// Actividad 2
 
 let cal1 = prompt("ingrese la primera calificacion");
 let cal2 = prompt("ingrese la segunda calificacion");
