@@ -7,6 +7,22 @@ if (edad <18){
     alert("usted es mayor de edad")
 }
 
+/*Dadas las tres calificaciones que el estudiante obtuvo en curso:
+a) determinar su promedio
+b) indicar si el estudiante aprobo el curso
+las notas deben ser de 1 a 10 y aprueba con un promedio mayor de 6.*/
+
+let cal1 = prompt("ingrese la primera calificacion");
+let cal2 = prompt("ingrese la segunda calificacion");
+let cal3 = prompt("ingrese la tercera calificacion");
+let sum = parseInt(cal1)+ parseInt(cal2)+ parseInt(cal3);
+let prom = parseInt(sum/3);
+alert("El promedio de su nota es " + prom)
+if (prom <6){
+    alert("usted desaprobó")
+} else (prom >=6);{
+    alert("Usted aprobó")
+}
 /*Realizar una calculadora con las operaciones bassicas*/
 
 let opcion = prompt("1. suma 2. resta 3. division 4. multiplcacion");
