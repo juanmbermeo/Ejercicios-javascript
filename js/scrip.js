@@ -1,7 +1,7 @@
 //Actividad
 // Actividad 1
 
-
+/*
 let edad = prompt("Ingresa tu edad: ");
 
 if (edad < 18) {
@@ -213,4 +213,12 @@ if (opcion==1){
 } else {
     multiplicacion=parseInt(nume1)*parseInt(nume2);
     alert(multiplicacion);
-}
+}*/
+//Conversor de unidades de longitud 
+
+let de = prompt("1. Km 2. Hm 3. Dm 4. m 5. dm 6. cm 7. mm");
+let opci= prompt("Digite la longitud que quire convertir");
+let A = prompt("1. Km 2. Hm 3. Dm 4. m 5. dm 6. cm 7. mm");
+
+if
+
