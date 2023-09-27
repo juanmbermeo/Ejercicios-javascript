@@ -14,12 +14,12 @@ if (edad < 18) {
 let cal1 = prompt("ingrese la primera calificacion");
 let cal2 = prompt("ingrese la segunda calificacion");
 let cal3 = prompt("ingrese la tercera calificacion");
-let sum = parseInt(cal1)+ parseInt(cal2)+ parseInt(cal3);
-let prom = parseInt(sum/3);
+let sum = parseFloat(cal1)+ parseFloat(cal2)+ parseFloat(cal3);
+let prom = parseFloat(sum/3);
 alert("El promedio de su nota es " + prom)
 if (prom <6){
     alert("usted desaprobó")
-} else (prom >=6);{
+} else{
     alert("Usted aprobó")
 }
 // Actividad 3
