@@ -10,7 +10,7 @@ if (edad < 18) {
   alert("Eres mayor de edad."); 
 }
 
-// Actividad 2
+// Actividad 2 
 
 let cal1 = prompt("ingrese la primera calificacion");
 let cal2 = prompt("ingrese la segunda calificacion");

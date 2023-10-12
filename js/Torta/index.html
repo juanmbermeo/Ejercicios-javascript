@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Torta</title>
+</head>
+<body>
+    <h1>Calculadora de Torta</h1>
+
+    <p>Steven, Cristian y Yudy comieron una torta, y queremos calcular la fracción total que comieron.</p>
+
+    <label for="cristian">Porción de Cristian: </label>
+    <input type="text" id="cristian" value="1/8"><br>
+
+    <label for="alejandra">Porción de Alejandra: </label>
+    <input type="text" id="alejandra" value="5/14"><br>
+
+    <label for="yudy">Porción de Yudy: </label>
+    <input type="text" id="yudy" value="3/7"><br>
+
+    <button onclick="calcularFraccionTotal()">Calcular Fracción Total</button>
+
+    <p>Fracción Total Comida: <span id="resultado"></span></p>
+
+    <script>
+        function calcularFraccionTotal() {
+            // Obtener los valores de las porciones
+            var porcionCristian = parseFraction(document.getElementById("cristian").value);
+            var porcionAlejandra = parseFraction(document.getElementById("alejandra").value);
+            var porcionYudy = parseFraction(document.getElementById("yudy").value);
+
+            // Sumar las porciones
+            var fraccionTotal = sumarFracciones([porcionCristian, porcionAlejandra, porcionYudy]);
+
+            // Mostrar el resultado en la página
+            document.getElementById("resultado").textContent = fraccionTotal[0] + " / " + fraccionTotal[1];
+        }
+
+        // Función para analizar fracciones en formato "a/b"
+        function parseFraction(fractionString) {
+            var parts = fractionString.split('/');
+            if (parts.length === 2) {
+                var numerator = parseInt(parts[0], 10);
+                var denominator = parseInt(parts[1], 10);
+                if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+                    return [numerator, denominator];
+                }
+            }
+            alert("Formato de fracción no válido: " + fractionString);
+            return [0, 1]; // Valor predeterminado en caso de error
+        }
+
+        // Función para sumar un array de fracciones
+        function sumarFracciones(fracciones) {
+            var denominadorComun = 1;
+            for (var i = 0; i < fracciones.length; i++) {
+                denominadorComun *= fracciones[i][1];
+            }
+
+            var numeradorTotal = 0;
+            for (var i = 0; i < fracciones.length; i++) {
+                numeradorTotal += fracciones[i][0] * (denominadorComun / fracciones[i][1]);
+            }
+
+            // Encontrar el máximo común divisor para simplificar la fracción si es posible
+            var mcd = gcd(numeradorTotal, denominadorComun);
+
+            return [numeradorTotal / mcd, denominadorComun / mcd];
+        }
+
+        // Función para encontrar el máximo común divisor (MCD) de dos números
+        function gcd(a, b) {
+            if (b === 0) {
+                return a;
+            }
+            return gcd(b, a % b);
+        }
+    </script>
+</body>
+</html>
