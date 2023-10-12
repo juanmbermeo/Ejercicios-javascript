@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scrpt.js"></script>
+    <title>Document</title>
+</head>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Conversor de Unidades</title>
+</head>
+
+<body>
+    <h1>Conversor de unid. de Longitud</h1>
+    <input type="number" id="valor">
+    <select id="unidadOrigen">
+        <option value="km">Kilómetros</option>
+        <option value="hm">Hectómetros</option>
+        <option value="dam">Decámetros</option>
+        <option value="m">Metros</option>
+        <option value="dm">Decímetros</option>
+        <option value="cm">Centímetros</option>
+        <option value="mm">Milímetros</option>
+    </select>
+    <select id="unidadDestino">
+        <option value="km">Kilómetros</option>
+        <option value="hm">Hectómetros</option>
+        <option value="dam">Decámetros</option>
+        <option value="m">Metros</option>
+        <option value="dm">Decímetros</option>
+        <option value="cm">Centímetros</option>
+        <option value="mm">Milímetros</option>
+    </select>
+    <button onclick="actualizarResultado()">Convertir</button>
+    <p id="resultado"></p>
+
+    <script>
+        function actualizarResultado() {
+            var valor = document.getElementById("valor").value;
+            var unidadOrigen = document.getElementById("unidadOrigen").value;
+            var unidadDestino = document.getElementById("unidadDestino").value;
+            
+            var resultado = convertir(valor, unidadOrigen, unidadDestino);
+            
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
